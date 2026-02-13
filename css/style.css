@@ -20,60 +20,55 @@
         font-weight: 700; /* Bold Lato looks very clean */
     }
 
-   /* 2. NAVBAR */
-/* 2. NAVBAR */
-.navbar-custom {
-    background-color: #ffffff !important; 
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    z-index: 1030; 
-    /* Make navbar thinner by reducing vertical padding */
-    padding-top: 8px; 
-    padding-bottom: 8px;
-}
-
-/* Apply the large left gap directly to the navbar-brand */
-.navbar-custom .navbar-brand {
-    padding-left: 8vw; /* Adjust this value for your desired gap */
-    /* Ensure the logo image is vertically centered within the brand link */
-    display: flex;
-    align-items: center;
-    margin-right: 0; /* Bootstrap might add a margin, remove it for cleaner alignment */
-}
-
-.navbar-custom .navbar-brand img {
-    /* Adjust max-height to fit the thinner navbar */
-    max-height: 40px; 
-    height: auto;
-    width: auto;
-    display: block; /* Ensure it behaves as a block element within the flex container */
-}
-
-/* Ensure the navbar-toggler is also vertically centered with its icon */
-.navbar-custom .navbar-toggler {
-    /* Bootstrap's navbar already uses display: flex and align-items: center for the main container,
-       which should align the toggler and brand. This ensures the toggler itself has consistent padding. */
-    padding: 0.25rem 0.75rem; /* Standard Bootstrap padding for toggler */
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
+    /* 2. NAVBAR */
     .navbar-custom {
-        padding-top: 6px; /* Even thinner on mobile */
-        padding-bottom: 6px; /* Even thinner on mobile */
+        background-color: #ffffff !important; 
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        z-index: 1030; 
+        padding-top: 8px; 
+        padding-bottom: 8px;
     }
+
     .navbar-custom .navbar-brand {
-        padding-left: 15px; /* Smaller gap on mobile */
+        /* Set a fixed, significant gap for desktop screens */
+        /* You can adjust '100px' to whatever pixel value looks best for your "big gap" */
+        padding-left: 15px; 
+        display: flex;
+        align-items: center;
+        margin-right: 0;
     }
+
     .navbar-custom .navbar-brand img {
-        max-height: 35px; /* Smaller logo on mobile */
+        max-height: 40px; 
+        height: auto;
+        width: auto;
+        display: block;
     }
-    /* On mobile, ensure the brand and toggler are properly spaced */
-    .navbar-custom .container-fluid {
-        justify-content: space-between; /* Pushes brand to left, toggler to right */
-        align-items: center; /* Ensure vertical alignment */
+
+    /* Ensure the navbar-toggler is also vertically centered with its icon */
+    .navbar-custom .navbar-toggler {
+        padding: 0.25rem 0.75rem; 
     }
-}
+
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) { /* Applies to tablets and smaller devices */
+        .navbar-custom {
+            padding-top: 6px; 
+            padding-bottom: 6px; 
+        }
+        .navbar-custom .navbar-brand {
+            /* Smaller gap on mobile/tablet */
+            padding-left: 15px; 
+        }
+        .navbar-custom .navbar-brand img {
+            max-height: 35px;
+        }
+        .navbar-custom .container-fluid {
+            justify-content: space-between; 
+            align-items: center; 
+        }
+    }
 
     .nav-link {
         color: #555 !important;
