@@ -19,37 +19,59 @@
         font-family: 'Brawler';
         font-weight: 700; /* Bold Lato looks very clean */
     }
+
    /* 2. NAVBAR */
+/* 2. NAVBAR */
 .navbar-custom {
     background-color: #ffffff !important; 
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     z-index: 1030; 
-    padding-top: 12px; /* Added slight vertical breathing room */
-    padding-bottom: 0px;
+    /* Make navbar thinner by reducing vertical padding */
+    padding-top: 8px; 
+    padding-bottom: 8px;
 }
 
-/* This creates the "Big Gap" on the left margin */
-.navbar-custom .brand-wrapper {
-    padding-left: 0vw; /* 8% of viewport width - adjust this number to increase/decrease the gap */
+/* Apply the large left gap directly to the navbar-brand */
+.navbar-custom .navbar-brand {
+    padding-left: 8vw; /* Adjust this value for your desired gap */
+    /* Ensure the logo image is vertically centered within the brand link */
+    display: flex;
+    align-items: center;
+    margin-right: 0; /* Bootstrap might add a margin, remove it for cleaner alignment */
 }
 
-/* Specific styling for the brand image */
 .navbar-custom .navbar-brand img {
-    max-height: 50px; /* Slightly larger for visibility */
+    /* Adjust max-height to fit the thinner navbar */
+    max-height: 40px; 
     height: auto;
     width: auto;
-    display: block;
+    display: block; /* Ensure it behaves as a block element within the flex container */
 }
+
+/* Ensure the navbar-toggler is also vertically centered with its icon */
+.navbar-custom .navbar-toggler {
+    /* Bootstrap's navbar already uses display: flex and align-items: center for the main container,
+       which should align the toggler and brand. This ensures the toggler itself has consistent padding. */
+    padding: 0.25rem 0.75rem; /* Standard Bootstrap padding for toggler */
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
-    /* Reduce the massive gap on mobile so it doesn't squash the content */
-    .navbar-custom .brand-wrapper {
-        padding-left: 0px; 
+    .navbar-custom {
+        padding-top: 6px; /* Even thinner on mobile */
+        padding-bottom: 6px; /* Even thinner on mobile */
     }
-    
+    .navbar-custom .navbar-brand {
+        padding-left: 15px; /* Smaller gap on mobile */
+    }
     .navbar-custom .navbar-brand img {
-        max-height: 50px;
+        max-height: 35px; /* Smaller logo on mobile */
+    }
+    /* On mobile, ensure the brand and toggler are properly spaced */
+    .navbar-custom .container-fluid {
+        justify-content: space-between; /* Pushes brand to left, toggler to right */
+        align-items: center; /* Ensure vertical alignment */
     }
 }
 

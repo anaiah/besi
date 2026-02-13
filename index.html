@@ -23,21 +23,18 @@
 
     <!-- Semi-Transparent Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-        <!-- Changed to container-fluid for full width control -->
         <div class="container-fluid">
-            <!-- Added a custom class 'brand-wrapper' for the big left gap -->
-            <div class="brand-wrapper">
-                <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="./img/besi_main_logo.jpg" alt="Logo">
-                </a>
-            </div>
+            <!-- The large left gap will now be applied directly to navbar-brand via CSS -->
+            <a class="navbar-brand" href="javascript:void(0)">
+                <img src="/img/besi_main_logo.jpg" alt="Logo">
+            </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto pe-5"> <!-- pe-5 adds padding to the right of the links -->
+                <ul class="navbar-nav ms-auto pe-5">
                     <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#mission">Mission & Vision</a></li>
