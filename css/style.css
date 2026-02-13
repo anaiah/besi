@@ -38,8 +38,8 @@
         /* 4. Optional: Remove bold if the font is already heavy */
         font-weight: 500; 
         /* 2. The Box (Rectangle) */
-        border: 5px solid var(--secondary-color); /* Same Brown color as text */
-        padding: 6px 10px;  /* Spacing: 6px top/bottom, 10px left/right */
+        /*border: 5px solid var(--secondary-color); */  /* Same Brown color as text */
+        /*padding: 6px 10px;*/  /* Spacing: 6px top/bottom, 10px left/right */
         
         /* 3. Refinements for the "Logo" Look */
         border-radius: 4px;    /* Slightly softened corners (change to 0px for sharp corners) */
