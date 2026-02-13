@@ -1,7 +1,7 @@
     /* 1. GLOBAL VARIABLES */
     :root {
-        --primary-color: #d4a017; /* Turmeric Gold */
-        --secondary-color: #8b5a2b; /* Ginger Brown */
+        --primary-color:#800657; /* Turmeric Gold */
+        --secondary-color:#cc0689; /* Ginger Brown */
         --light-bg: #fffbf0;      /* Cream Background */
         --dark-text: #333333;
     }
@@ -19,56 +19,40 @@
         font-family: 'Brawler';
         font-weight: 700; /* Bold Lato looks very clean */
     }
-    /* 2. NAVBAR (Glassmorphism) */
-    .navbar-custom {
-        background-color: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-    }
+   /* 2. NAVBAR */
+.navbar-custom {
+    background-color: #ffffff !important; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    z-index: 1030; 
+    padding-top: 12px; /* Added slight vertical breathing room */
+    padding-bottom: 0px;
+}
 
-    
-    .navbar-brand {
-        /* 1. The exact name Google gave you */
-        font-family: 'BBH Hegarty',cursive; 
-        /* 2. Make it bigger so it looks like a logo */
-        font-size: 1.8rem; 
-        /* 3. Keep your Ginger Brown color */
-        color: var(--secondary-color) !important;
-        /* 4. Optional: Remove bold if the font is already heavy */
-        font-weight: 500; 
-        /* 2. The Box (Rectangle) */
-        /*border: 5px solid var(--secondary-color); */  /* Same Brown color as text */
-        /*padding: 6px 10px;*/  /* Spacing: 6px top/bottom, 10px left/right */
-        
-        /* 3. Refinements for the "Logo" Look */
-        border-radius: 4px;    /* Slightly softened corners (change to 0px for sharp corners) */
-        letter-spacing: 1px;   /* Adds elegance */
-        line-height: 1;        /* Fixes vertical alignment inside the box */
-        display: inline-block; /* Ensures the box wraps tightly around the text */
-        transition: all 0.3s ease; /* Smooth effect if you hover */
+/* This creates the "Big Gap" on the left margin */
+.navbar-custom .brand-wrapper {
+    padding-left: 0vw; /* 8% of viewport width - adjust this number to increase/decrease the gap */
+}
 
-        margin-left: -50px;
-    }
+/* Specific styling for the brand image */
+.navbar-custom .navbar-brand img {
+    max-height: 50px; /* Slightly larger for visibility */
+    height: auto;
+    width: auto;
+    display: block;
+}
 
-    /* Mobile Only Rules (Screens narrower than 992px) */
+/* Responsive adjustments */
 @media (max-width: 991px) {
-    .navbar-brand {
-        /* 1. Apply your requested padding */
-        padding: 6px 20px;
-
-        /* 2. IMPORTANT: Reset the margin so it doesn't go off-screen */
-        margin-left: 0;
-        
-        /* 3. Optional: Make font slightly smaller for small phones */
-        font-size: 1.3rem; 
+    /* Reduce the massive gap on mobile so it doesn't squash the content */
+    .navbar-custom .brand-wrapper {
+        padding-left: 0px; 
+    }
+    
+    .navbar-custom .navbar-brand img {
+        max-height: 50px;
     }
 }
-    /* Optional: Make it glow Gold when you hover over the logo */
-    .navbar-brand:hover {
-        border-color: var(--primary-color); /* Turns border Gold */
-        color: var(--primary-color) !important; /* Turns text Gold */
-    }    
+
     .nav-link {
         color: #555 !important;
         font-weight: 500;
@@ -106,7 +90,7 @@
         border-radius: 50px; /* Pill shape is more modern */
         font-weight: 600;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(212, 160, 23, 0.3); /* Colored shadow */
+        box-shadow: 0 4px 15px #080636; /* Colored shadow */
     }
 
     .btn-turmeric:hover {
@@ -225,7 +209,7 @@
 
     /* 1. New Dark Background for Contrast */
 .bg-ginger-dark {
-    background-color: var(--secondary-color); /* Uses your Brown color */
+    background-color: #080636 ; /*Uses your Brown color */
     padding: 100px 0;
 }
 
