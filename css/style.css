@@ -97,6 +97,49 @@
         text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
     }
 
+
+
+    /* Responsive adjustments for Carousel Images */
+@media (max-width: 767px) { /* Applies to small devices (phones) */
+    /* Target the carousel images */
+    #yourCarousel .carousel-item img { /* Replace #yourCarousel with your actual carousel ID */
+        height: 250px; /* Set a fixed height for mobile */
+        object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+        object-position: center; /* Centers the image within its container */
+    }
+
+    /* Adjust the caption positioning for smaller screens if needed */
+    .carousel-caption {
+        top: 50%; /* Position caption vertically in the middle */
+        transform: translateY(-50%); /* Adjust for its own height */
+        left: 5%;
+        right: 5%;
+        text-align: center;
+    }
+
+    /* Optionally, adjust caption text size for mobile */
+    .carousel-caption h1 {
+        font-size: 1.8rem; /* Smaller heading */
+    }
+    .carousel-caption p {
+        font-size: 0.9rem; /* Smaller paragraph */
+        display: none; /* Hide paragraph on very small screens to save space */
+    }
+    /* If you added a smaller heading for mobile, ensure it's displayed */
+    .carousel-caption h3.d-md-none {
+        display: block !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* Applies to medium devices (tablets) */
+    #yourCarousel .carousel-item img {
+        height: 350px; /* A slightly taller height for tablets */
+        object-fit: cover;
+        object-position: center;
+    }
+    /* You might want to adjust caption styles for tablets too */
+}
+
     /* 4. BUTTONS */
     /* Primary Turmeric Button */
     .btn-turmeric {
